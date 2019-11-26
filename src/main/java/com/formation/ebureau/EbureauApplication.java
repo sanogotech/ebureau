@@ -1,13 +1,13 @@
-package com.formation.ereservation;
+package com.formation.ebureau;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class EreservationApplication {
+public class EbureauApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(EreservationApplication.class, args);
+		SpringApplication.run(EbureauApplication.class, args);
 	}
 
 }

@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.formation</groupId>
-	<artifactId>ereservation</artifactId>
+	<artifactId>ebureau</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-	<name>ereservation</name>
+	<name>ebureau</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
@@ -72,18 +72,8 @@
 			<scope>test</scope>
 		</dependency>
 		
-		<dependency>
-			<groupId>p6spy</groupId>
-			<artifactId>p6spy</artifactId>
-			<version>3.8.0</version>
-		</dependency>
-		
-		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-chrome-driver -->
-		<dependency>
-			<groupId>org.seleniumhq.selenium</groupId>
-			<artifactId>selenium-chrome-driver</artifactId>
-			<version>3.141.59</version>
-		</dependency>
+	
+
 
 		
 	</dependencies>

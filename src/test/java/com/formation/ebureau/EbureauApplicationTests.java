@@ -1,10 +1,10 @@
-package com.formation.ereservation;
+package com.formation.ebureau;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class EreservationApplicationTests {
+class EbureauApplicationTests {
 
 	@Test
 	void contextLoads() {

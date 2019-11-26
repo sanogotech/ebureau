@@ -1,4 +1,4 @@
-package com.formation.ereservation;
+package com.formation.ebureau;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
