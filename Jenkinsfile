@@ -7,10 +7,10 @@ pipeline {
     stages {
 	
 		stage('SourcePreparation') {
-			steps {	
+			//steps {	
 				// Get some code from a GitHub repository
-				git 'https://github.com/sanogotech/ebureau.git'
-			}
+				//git 'https://github.com/sanogotech/ebureau.git'
+			//}
 		}
 		
         stage('Build') {
