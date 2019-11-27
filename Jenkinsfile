@@ -3,15 +3,10 @@ pipeline {
 	tools {
         maven 'M3' 
     }
-	
+
     stages {
 	
-		stage('SourcePreparation') {
-			//steps {	
-				// Get some code from a GitHub repository
-				//git 'https://github.com/sanogotech/ebureau.git'
-			//}
-		}
+		
 		
         stage('Build') {
             steps {
