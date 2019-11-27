@@ -32,7 +32,7 @@ public class MainController {
          logger.debug("A DEBUG Message");
          logger.info("An INFO Message");
          logger.warn("A WARN Message");
-         logger.error("An ERROR Message");
+         logger.error("An ERROR Message")
   
         return "employee";
     }
