@@ -30,10 +30,31 @@ pipeline {
         }
 		
 		
-		stage('Docker Image ') { 
+		stage('Package') { 
+            steps {
+                echo 'Hello, Package '
+				bat 'mvn  clean package'
+			}
+
+        }
+		
+		stage('PDeploy to Tomcat') { 
+            steps {
+                echo 'Deploy to Tomcat '
+				//Sleep 100s
+				bat 'sleep  100'
+				//TODO
+			}
+
+        }
+		
+		//Backgroug task  Windows  :  start /b dotnet run
+		//  Linux   task  &
+		
+		stage('Docker Image For Production ') { 
             steps {
                 echo 'Docker Image'
-				bat  'docker build -t softeam/myebureau .'
+				//bat  'docker build -t softeam/myebureau .'
 			}
 
         }
@@ -41,7 +62,8 @@ pipeline {
 		
 		stage('Run Docker ') { 
             steps {
-				bat  'docker run -p 8088:8088 -t softeam/myebureau'
+				 echo 'Run Docker'
+				//bat  'docker run -p 8088:8088 -t softeam/myebureau'
 			}
 
         }
