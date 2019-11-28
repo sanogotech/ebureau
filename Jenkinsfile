@@ -12,6 +12,7 @@ pipeline {
             steps {
                 echo 'Hello, Build Maven'
 				bat'mvn clean compile'
+				step([$class: 'Mailer', recipients: 'admin@somewhere.com',])
             }
         }
         stage('Test') { 
