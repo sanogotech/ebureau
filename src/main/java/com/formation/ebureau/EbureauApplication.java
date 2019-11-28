@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class EbureauApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(EbureauApplication.class, args);
+		SpringApplication.run(EbureauApplication.class, args)
 	}
 
 }
