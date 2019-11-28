@@ -22,6 +22,17 @@ pipeline {
 
         }
 		
+		stage('QualityCodeSonar') { 
+            steps {
+                echo 'Quality Code Sonar '
+				bat 'mvn sonar:sonar -Dsonar.host.url=http://localhost:9000 -Dsonar.login=a6ee2e1e2b647d5cf36cbe75e4bf76f33002b357'
+			}
+
+        }
+		
+		
+		
+		
 		stage('Deploy ') { 
             steps {
                 echo 'Hello, Deploy '
