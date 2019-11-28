@@ -25,7 +25,7 @@ pipeline {
 		stage('Deploy ') { 
             steps {
                 echo 'Hello, Deploy '
-				bat 'sleep(time:3,unit:'SECONDS')'
+				bat 'sleep  100'
 				echo 'End  , Deploy '
 			}
 
