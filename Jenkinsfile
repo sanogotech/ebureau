@@ -7,7 +7,6 @@ pipeline {
     stages {
 	
 		
-		
         stage('Build') {
             steps {
                 echo 'Hello, Build Maven'
@@ -31,13 +30,18 @@ pipeline {
         }
 		
 		
-		
-		
-		stage('Deploy ') { 
+		stage('Docker Image ') { 
             steps {
-                echo 'Hello, Deploy '
-				bat 'sleep  100'
-				echo 'End  , Deploy '
+                echo 'Docker Image'
+				bat  'docker build -t softeam/myebureau .'
+			}
+
+        }
+		
+		
+		stage('Run Docker ') { 
+            steps {
+				bat  'docker run -p 8088:8088 -t softeam/myebureau'
 			}
 
         }
