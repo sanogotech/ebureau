@@ -11,8 +11,12 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Hello, Build Maven'
-				bat'mvn clean compile'
-				step([$class: 'Mailer', recipients: 'admin@somewhere.com'])
+				try {
+						bat'mvn clean compile'
+				} finally {
+					println currentBuild.result  // this prints null
+					step([$class: 'Mailer', notifyEveryUnstableBuild: true, recipients: 'me@me.com', sendToIndividuals: true])
+				}
             }
         }
         stage('Test') { 
