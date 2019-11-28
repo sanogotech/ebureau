@@ -11,14 +11,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Hello, Build Maven'
-				script {
-					try {
-							bat'mvn clean compile'
-					} finally {
-						println currentBuild.result  // this prints null
-						step([$class: 'Mailer', notifyEveryUnstableBuild: true, recipients: 'me@me.com', sendToIndividuals: true])
-					}
-				}
+				bat'mvn clean compile'
             }
         }
         stage('Test') { 
@@ -33,8 +26,7 @@ pipeline {
             steps {
                 echo 'Hello, Deploy '
 				bat 'sleep(time:3,unit:"SECONDS")'
-				
-				echo 'End --- Deploy '
+				echo 'End  , Deploy '
 			}
 
         }
